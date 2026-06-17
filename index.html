@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaiqing Lin · Multimedia Forensics & AI-Generated Image Detection</title>
+  <meta name="description" content="Kaiqing Lin (林凯清), PhD candidate at Shenzhen University (advised by Prof. Bin Li), currently a visiting researcher with Prof. Luisa Verdoliva at the University of Naples Federico II. Multimedia forensics, multimedia security, and AI-generated image / deepfake detection." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-brand" href="#top">Kaiqing.Lin</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ===== HERO / ABOUT ===== -->
+    <section id="about" class="hero">
+      <div class="hero-photo">
+        <!-- Replace photo.jpg with your own headshot (square works best) -->
+        <img src="Photo.jpg" alt="Kaiqing Lin" onerror="this.classList.add('placeholder');this.alt='';" />
+      </div>
+      <div class="hero-text">
+        <p class="eyebrow">PhD Candidate · Shenzhen University</p>
+        <h1>Kaiqing Lin<span class="cjk"> 林凯清</span></h1>
+        <p class="lead">
+          I am a Ph.D. candidate at Shenzhen University,
+          advised by <a href="https://scholar.google.com/citations?user=g0iR9IkAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Bin Li</a>.
+          I am currently a visiting student in the Multimedia Forensics Lab led by
+          <a href="https://www.grip.unina.it/members/verdoliva" target="_blank" rel="noopener">Prof. Luisa Verdoliva</a>
+          at the University of Naples Federico II, Italy.
+        </p>
+        <p class="lead">
+          My research focuses on <strong>multimedia forensics</strong>, <strong>information hiding</strong>, and
+          <strong>unified multimodal models</strong>, including generative multimodal models and multimodal large
+          language models. I am interested in understanding how multimodal models generate, reason about, and
+          analyze visual content, while focusing on developing reliable methods for distinguishing real and synthetic media.
+        </p>
+        <p class="lead">
+          <strong><em>I expect to graduate in 2027 and am interested in research opportunities in both academia and industry.</em></strong>
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#publications">View publications</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=X5IMtscAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="mailto:linkaiqing2021@email.szu.edu.cn">Email me</a>
+        </div>
+        <ul class="metrics" aria-label="Citation metrics">
+          <li><span class="metric-num">232</span><span class="metric-label">Citations</span></li>
+          <li><span class="metric-num">8</span><span class="metric-label">h-index</span></li>
+          <li><span class="metric-num">5</span><span class="metric-label">i10-index</span></li>
+        </ul>
+        <p class="metrics-note">Metrics via Google Scholar · last updated June 2026</p>
+      </div>
+    </section>
+
+    <!-- ===== NEWS ===== -->
+    <section id="news" class="news">
+      <h2 class="section-title">News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">2026</span>
+          <span class="news-body">🎉 <em>Deep-VRM</em> was accepted to <strong>ICML 2026</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">2026</span>
+          <span class="news-body">🎉 <em>Unified Multimodal Models as Auto-Encoders</em> and <em>SafeGuard-VL</em> were accepted to <strong>CVPR 2026</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">2025</span>
+          <span class="news-body">🎉 <em>VIPGuard</em> and <em>OMAT</em> were accepted to <strong>NeurIPS 2025</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">2025</span>
+          <span class="news-body">🎉 <em>RepDFD</em> was accepted to <strong>AAAI 2025</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">2025</span>
+          <span class="news-body">🎉 <em>DITL2</em> was accepted to <strong>ACM Multimedia 2025</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">2024</span>
+          <span class="news-body">📄 <em>KDNFT</em> was published in <strong>IEEE TIFS</strong>.</span>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- ===== PUBLICATIONS ===== -->
+    <section id="publications" class="publications">
+      <div class="pub-head">
+        <h2 class="section-title">Publications</h2>
+        <a class="scholar-link" href="https://scholar.google.com/citations?user=X5IMtscAAAAJ&hl=en" target="_blank" rel="noopener">Full list on Google Scholar →</a>
+      </div>
+      <h3 class="group-head">Primary Publications</h3>
+      <ol class="pub-list">
+        <li>
+          <span class="pub-title">Deep Residual Injection for Full-Spectrum Forensic Signal Perception in Multimodal Large Language Models</span>
+          <span class="pub-authors"><strong>K. Lin</strong>, et al.</span>
+          <span class="pub-first">★ First author</span>
+          <span class="pub-venue">ICML 2026 (International Conference on Machine Learning) · accepted, to appear</span>
+          <span class="pub-fig"><img src="ICML.png" alt="Deep-VRM method overview" loading="lazy" onerror="this.closest('.pub-fig').style.display='none'"></span>
+        </li>
+        <li>
+          <span class="pub-title">Unified Multimodal Models as Auto-Encoders</span>
+          <span class="pub-authors">Z. Yan, <strong>K. Lin</strong>, et al.</span>
+          <span class="pub-cofirst">★ Co-first author</span>
+          <span class="pub-venue">CVPR 2026 (IEEE/CVF Conference on Computer Vision and Pattern Recognition)</span>
+          <span class="pub-fig"><img src="CVPR.png" alt="Unified-GRPO reconstructive reinforcement learning" loading="lazy" onerror="this.closest('.pub-fig').style.display='none'"></span>
+        </li>
+        <li>
+          <span class="pub-title">Guard Me If You Know Me: Protecting Specific Face-Identity from Deepfakes</span>
+          <span class="pub-authors"><strong>K. Lin</strong>, Z. Yan, K.Y. Zhang, L. Hao, Y. Zhou, Y. Lin, W. Li, T. Yao, S. Ding, B. Li</span>
+          <span class="pub-first">★ First author</span>
+          <span class="pub-venue">NeurIPS 2025 (Advances in Neural Information Processing Systems 38)</span>
+          <span class="pub-fig"><img src="NeurIPS.png" alt="VIP Guard identity-specific deepfake protection" loading="lazy" onerror="this.closest('.pub-fig').style.display='none'"></span>
+        </li>
+        <li>
+          <span class="pub-title">Seeing Before Reasoning: A Unified Framework for Generalizable and Explainable Fake Image Detection</span>
+          <span class="pub-authors"><strong>K. Lin</strong>, Z. Yan, R. Chen, J. Ye, K.Y. Zhang, Y. Zhou, P. Jin, B. Li, T. Yao, S. Ding</span>
+          <span class="pub-first">★ First author</span>
+          <span class="pub-venue">arXiv:2509.25502, 2025</span>
+          <span class="pub-fig"><img src="Arxiv.png" alt="Seeing Before Reasoning multi-round dialogue" loading="lazy" onerror="this.closest('.pub-fig').style.display='none'"></span>
+        </li>
+        <li>
+          <span class="pub-title">Standing on the Shoulders of Giants: Reprogramming Visual-Language Model for General Deepfake Detection</span>
+          <span class="pub-authors"><strong>K. Lin</strong>, Y. Lin, W. Li, T. Yao, B. Li</span>
+          <span class="pub-first">★ First author</span>
+          <span class="pub-venue">AAAI 2025, 39(5), 5262–5270 (AAAI Conference on Artificial Intelligence)</span>
+          <span class="pub-fig"><img src="AAAI.png" alt="Reprogramming visual-language model for deepfake detection" loading="lazy" onerror="this.closest('.pub-fig').style.display='none'"></span>
+        </li>
+        <li>
+          <span class="pub-title">Constructing an Intrinsically Robust Steganalyzer via Learning Neighboring Feature Relationships and Self-Adversarial Adjustment</span>
+          <span class="pub-authors"><strong>K. Lin</strong>, B. Li, W. Li, M. Barni, B. Tondi, X. Liu</span>
+          <span class="pub-first">★ First author</span>
+          <span class="pub-venue">IEEE Transactions on Information Forensics and Security 19, 9390–9405, 2024</span>
+          <span class="pub-fig"><img src="TIFS.png" alt="KDNFT robust steganalyzer framework" loading="lazy" onerror="this.closest('.pub-fig').style.display='none'"></span>
+        </li>
+      </ol>
+
+      <h3 class="group-head">Other Publications</h3>
+      <ol class="pub-list" id="other-pubs">
+        <li>
+          <span class="pub-title">GPT-ImgEval: A Comprehensive Benchmark for Diagnosing GPT-4o in Image Generation</span>
+          <span class="pub-authors">Z. Yan, J. Ye, W. Li, Z. Huang, S. Yuan, X. He, <strong>K. Lin</strong>, J. He, C. He, L. Yuan</span>
+          <span class="pub-venue">arXiv:2504.02782, 2025</span>
+        </li>
+        <li>
+          <span class="pub-title">MoleCode Unlocks Structural Intelligence in Large Language Models</span>
+          <span class="pub-authors">Z. Yan, C. Liu, B. Zhao, <strong>K. Lin</strong>, J. Zhao, Y. Wang, et al.</span>
+          <span class="pub-venue">arXiv:2605.16480, 2026</span>
+        </li>
+        <li>
+          <span class="pub-title">Breaking Latent Prior Bias in Detectors for Generalizable AIGC Image Detection</span>
+          <span class="pub-authors">Y. Zhou, X. He, <strong>K. Lin</strong>, B. Fan, F. Ding, B. Li</span>
+          <span class="pub-venue">NeurIPS 2025 (Advances in Neural Information Processing Systems 38)</span>
+        </li>
+        <li>
+          <span class="pub-title">MPF-Net: Exposing High-Fidelity AI-Generated Video Forgeries via Hierarchical Manifold Deviation and Micro-Temporal Fluctuations</span>
+          <span class="pub-authors">X. He, <strong>K. Lin</strong>, Y. Zhou, J. Zhong, W. Ye, W. Yi, B. Fan, F. Ding, H. Li, B. Cao, B. Li</span>
+          <span class="pub-venue">arXiv:2601.21408, 2026</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">Towards Policy-Adaptive Image Guardrail: Benchmark and Method</span>
+          <span class="pub-authors">C. Piao, Z. Yan, H. Xu, Y. Zhao, <strong>K. Lin</strong>, F. Xu, S. Zhou</span>
+          <span class="pub-venue">CVPR 2026 (IEEE/CVF Conference on Computer Vision and Pattern Recognition)</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">Taming the Forensic Singularity: A Regularized Hyperbolic Framework for Generalizable AI-Generated Image Detection</span>
+          <span class="pub-authors">Y. Zhou, X. He, <strong>K. Lin</strong>, F. Ding, B. Fan, H. Li, B. Li</span>
+          <span class="pub-venue">Manuscript, 2026 · in submission</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">FakeVLM-R1: Internalizing Physical Laws via CoT for Synthetic Image Detection</span>
+          <span class="pub-authors">L. Zhu, J. Ye, <strong>K. Lin</strong>, Z. Yan, C. He, W. Li</span>
+          <span class="pub-venue">arXiv:2605.30062, 2026</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">Diffusion-Guided Adversarial Perturbation Injection for Generalizable Defense Against Facial Manipulations</span>
+          <span class="pub-authors">Y. Li, L. Xue, <strong>K. Lin</strong>, H. Quan, D. Lin, H. Tian, H. Wang, B. Wang</span>
+          <span class="pub-venue">arXiv:2604.01635, 2026</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">AgentFox: LLM Agent-Guided Fusion with Explainability for AI-Generated Image Detection</span>
+          <span class="pub-authors">Y. Yu, Y. Zhou, B. Li, <strong>K. Lin</strong>, H. Li, J. Ni, B. Cao</span>
+          <span class="pub-venue">arXiv:2603.23115, 2026</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">MIRROR: Manifold Ideal Reference ReconstructOR for Generalizable AI-Generated Image Detection</span>
+          <span class="pub-authors">R. Liu, M. Cui, Z. Qin, Z. Yan, R. Chen, Y. Han, Z. Li, J. Chen, Z.J. Chen, <strong>K. Lin</strong>, et al.</span>
+          <span class="pub-venue">arXiv:2602.02222, 2026</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">Simplicity Prevails: The Emergence of Generalizable AIGI Detection in Visual Foundation Models</span>
+          <span class="pub-authors">Y. Zhou, X. He, <strong>K. Lin</strong>, B. Fan, F. Ding, B. Li</span>
+          <span class="pub-venue">arXiv:2602.01738, 2026</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">An Efficient Watermarking Method for Latent Diffusion Models via Low-Rank Adaptation and Dynamic Loss Weighting</span>
+          <span class="pub-authors">D. Lin, Y. Li, B. Tondi, <strong>K. Lin</strong>, B. Li, M. Barni</span>
+          <span class="pub-venue">Expert Systems with Applications, 2026</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">Texture-Adaptive Cost Modeling via Residual Frequency Quantization and Predictive Order Awareness for WebP Steganography</span>
+          <span class="pub-authors">B. Li, X. Xiao, W. Li, <strong>K. Lin</strong>, X. Zhang, B. Tian, Y. Zhao</span>
+          <span class="pub-venue">IEEE Transactions on Circuits and Systems for Video Technology, 2026</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">Task-Model Alignment: A Simple Path to Generalizable AI-Generated Image Detection</span>
+          <span class="pub-authors">R. Chen, J. Gao, <strong>K. Lin</strong>, K. Zhang, Y. Zhao, I. Guan, T. Yao, S. Ding</span>
+          <span class="pub-venue">arXiv:2512.06746, 2025</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">DITL2: Dual-Stage Invariance Transfer Learning for Generalizable Document Image Tampering Localization</span>
+          <span class="pub-authors">S. Li, Y. Guo, S. Chen, B. Li, <strong>K. Lin</strong>, C. Chen, H. Li, T. Yao, S. Ding</span>
+          <span class="pub-venue">ACM Multimedia 2025, 82–91 (33rd ACM International Conference on Multimedia)</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">Brought a Gun to a Knife Fight: Modern VFM Baselines Outgun Specialized Detectors on In-the-Wild AI Image Detection</span>
+          <span class="pub-authors">Y. Zhou, X. He, <strong>K. Lin</strong>, B. Fan, F. Ding, J. Zeng, B. Li</span>
+          <span class="pub-venue">arXiv:2509.12995, 2025</span>
+        </li>
+        <li class="extra">
+          <span class="pub-title">Spatial-Frequency Feature Fusion Network for Lightweight and Arbitrary-Sized JPEG Steganalysis</span>
+          <span class="pub-authors">X. Liu, W. Li, <strong>K. Lin</strong>, B. Li</span>
+          <span class="pub-venue">IEEE Signal Processing Letters 31, 2585–2589, 2024</span>
+        </li>
+      </ol>
+      <button class="show-more-btn" type="button" id="toggle-other" aria-expanded="false">Show 13 more ▾</button>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="news">
+      <h2 class="section-title">Experience</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">2026–Present</span>
+          <span class="news-body"><strong>Co-Founder · Atomflow</strong> — an AI-for-Science startup on chemistry and LLM agents.</span>
+        </li>
+        <li>
+          <span class="news-date">2024–2026</span>
+          <span class="news-body"><strong>Research Intern · Tencent YouTu Lab</strong> — Facial Security Department, Shanghai. Designed high-performance deepfake-detection models for real-world deployment, and explored practical applications of multimedia forensics in real-world security scenarios.</span>
+        </li>
+        <li>
+          <span class="news-date">2024–2025</span>
+          <span class="news-body"><strong>Shenzhen University Special Graduate Student Fund</strong> — awarded CNY 50,000 in competitive research funding.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== AWARDS ===== -->
+    <section id="awards" class="news">
+      <h2 class="section-title">Awards</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">2025</span>
+          <span class="news-body"><strong>National Scholarship</strong> for Ph.D. students, China.</span>
+        </li>
+        <li>
+          <span class="news-date">2023</span>
+          <span class="news-body"><strong>First Prize</strong>, Image Track — 2023 National Information Hiding and Detection Competition. Built a detector that generalizes across multiple steganography algorithms.</span>
+        </li>
+        <li>
+          <span class="news-date">2023</span>
+          <span class="news-body"><strong>Fourth Place</strong>, ICDAR 2023 DTT Text Manipulation Detection (Alibaba Security). Built a high-performance detector to localize manipulated regions in screenshots and photos.</span>
+        </li>
+        <li>
+          <span class="news-date">2022</span>
+          <span class="news-body"><strong>Second Prize</strong>, 2022 China Graduate Student Cybersecurity Innovation Competition. Designed a steganography algorithm robust to resizing and JPEG compression.</span>
+        </li>
+      </ul>
+    </section>
+
+
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-lead">
+        I'm happy to talk about research, collaborations, or opportunities. The best way to reach
+        me is email.
+      </p>
+      <ul class="contact-links">
+        <li>
+          <a href="mailto:linkaiqing2021@email.szu.edu.cn">
+            <svg class="contact-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 2.4V18h18V7.4l-9 6-9-6Zm.9-.4 8.1 5.4L20.1 7H3.9Z"/></svg>
+            <span class="contact-text"><span class="contact-label">Email · institutional</span>linkaiqing2021@email.szu.edu.cn</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:2511781193@qq.com">
+            <svg class="contact-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 2.4V18h18V7.4l-9 6-9-6Zm.9-.4 8.1 5.4L20.1 7H3.9Z"/></svg>
+            <span class="contact-text"><span class="contact-label">Email · personal</span>2511781193@qq.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://scholar.google.com/citations?user=X5IMtscAAAAJ&hl=en" target="_blank" rel="noopener">
+            <svg class="contact-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm0 13.4-6-3.3v3.2c0 1.7 2.7 3.2 6 3.2s6-1.5 6-3.2v-3.2l-6 3.3Z"/></svg>
+            <span class="contact-text"><span class="contact-label">Google Scholar</span>Publications &amp; citations</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/KQL11" target="_blank" rel="noopener">
+            <svg class="contact-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.3a10.7 10.7 0 0 0-3.4 20.9c.5.1.7-.2.7-.5v-1.9c-3 .6-3.6-1.4-3.6-1.4-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.6 1.1 1.6 1.1 1 1.6 2.5 1.2 3.1.9.1-.7.4-1.2.7-1.5-2.4-.3-4.9-1.2-4.9-5.3 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 3 1.1a10.3 10.3 0 0 1 5.4 0c2-1.4 3-1.1 3-1.1.6 1.4.2 2.5.1 2.8.7.8 1.1 1.7 1.1 2.9 0 4.1-2.5 5-4.9 5.3.4.3.7 1 .7 2v3c0 .3.2.6.7.5A10.7 10.7 0 0 0 12 1.3Z"/></svg>
+            <span class="contact-text"><span class="contact-label">GitHub</span>github.com/KQL11</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kaiqing Lin · Shenzhen University. Built as a static site for GitHub Pages.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function () {
+      var btn = document.getElementById('toggle-other');
+      var list = document.getElementById('other-pubs');
+      if (!btn || !list) return;
+      var hiddenCount = list.querySelectorAll('.extra').length;
+      btn.addEventListener('click', function () {
+        var expanded = list.classList.toggle('show-all');
+        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        btn.textContent = expanded ? 'Show less ▴' : 'Show ' + hiddenCount + ' more ▾';
+      });
+    })();
+
+    (function () {
+      // Wrap each character in a .ch span. Chars of a word live inside a .mw
+      // wrapper (white-space:nowrap) so only spaces are line-break opportunities;
+      // a zero-width space between words gives the browser those break points.
+      function wrapChars(root) {
+        var nodes = Array.prototype.slice.call(root.childNodes);
+        nodes.forEach(function (n) {
+          if (n.nodeType === 3) {
+            if (!n.nodeValue) return;
+            var chars = Array.from(n.nodeValue);   // code-point aware, so emoji stay intact
+            var frag = document.createDocumentFragment();
+            var mw = null;
+            function newWord() { mw = document.createElement('span'); mw.className = 'mw'; frag.appendChild(mw); }
+            newWord();
+            for (var i = 0; i < chars.length; i++) {
+              var c = chars[i];
+              var ch = document.createElement('span');
+              ch.className = 'ch';
+              ch.textContent = c;
+              mw.appendChild(ch);
+              if (/\s/.test(c)) {
+                frag.appendChild(document.createTextNode('\u200B'));
+                newWord();
+              }
+            }
+            if (mw && !mw.childNodes.length) frag.removeChild(mw);
+            n.parentNode.replaceChild(frag, n);
+          } else if (n.nodeType === 1 && n.tagName !== 'SVG'
+                     && !n.classList.contains('ch') && !n.classList.contains('mw')) {
+            wrapChars(n);
+          }
+        });
+      }
+      // Collapse source-code whitespace (newlines + indentation) to single spaces,
+      // and trim the ends — otherwise white-space:pre on each char would preserve them.
+      function normalizeWS(el) {
+        var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null), t, ts = [];
+        while ((t = w.nextNode())) ts.push(t);
+        ts.forEach(function (tn) { tn.nodeValue = tn.nodeValue.replace(/\s+/g, ' '); });
+        if (ts.length) {
+          ts[0].nodeValue = ts[0].nodeValue.replace(/^\s+/, '');
+          ts[ts.length - 1].nodeValue = ts[ts.length - 1].nodeValue.replace(/\s+$/, '');
+        }
+      }
+      var sel = '.lead, .contact-lead, .news-body, .pub-title, .pub-authors, .pub-venue';
+      var containers = document.querySelectorAll(sel);
+      containers.forEach(function (el) { normalizeWS(el); wrapChars(el); });
+
+      // Respect reduced-motion: skip the interactive magnifier entirely.
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var MAX = 0.2;    // peak extra scale on the focused word (1.2× max)
+      var SIGX = 52;    // horizontal falloff (px)
+      var SIGY = 24;    // vertical falloff (px)
+      var EASE = 0.26;  // smoothing toward target each frame
+
+      // Pause the magnifier while the user is dragging a selection, so text stays copyable.
+      var selecting = false;
+      document.addEventListener('mousedown', function () { selecting = true; });
+      document.addEventListener('mouseup', function () { selecting = false; });
+
+      containers.forEach(function (el) {
+        var words = Array.prototype.slice.call(el.querySelectorAll('.ch'));
+        if (!words.length) return;
+        var raf = null, inside = false, lastX = 0, lastY = 0, lines = [];
+
+        // Cache geometry and group words into visual lines (positions are stable while hovering).
+        function measure() {
+          words.forEach(function (w) { w.style.transform = ''; });
+          var map = {};
+          words.forEach(function (w) {
+            var r = w.getBoundingClientRect();
+            w._cx = r.left + r.width / 2;
+            w._cy = r.top + r.height / 2;
+            w._w = r.width;
+            w._cur = 1; w._target = 1; w._e = 0; w._t = 0;
+            var key = Math.round(w._cy / 4);
+            (map[key] = map[key] || []).push(w);
+          });
+          lines = Object.keys(map).map(function (k) {
+            var arr = map[k];
+            arr.sort(function (a, b) { return a._cx - b._cx; });
+            return arr;
+          });
+        }
+        function tick() {
+          var moving = false;
+          // ease every word toward its target scale
+          for (var i = 0; i < words.length; i++) {
+            var w = words[i];
+            if (inside) {
+              var dx = lastX - w._cx, dy = lastY - w._cy;
+              var ex = (dx * dx) / (2 * SIGX * SIGX) + (dy * dy) / (2 * SIGY * SIGY);
+              w._target = ex > 9 ? 1 : 1 + MAX * Math.exp(-ex);
+            }
+            var cur = w._cur + (w._target - w._cur) * EASE;
+            if (Math.abs(cur - w._target) < 0.003) cur = w._target;
+            if (cur !== w._cur) { moving = true; }
+            w._cur = cur;
+            w._e = w._w * (cur - 1);
+          }
+          // per line: spread neighbours apart with translateX (no layout reflow → no line jumps)
+          for (var l = 0; l < lines.length; l++) {
+            var arr = lines[l], f = 0, fMax = 1;
+            for (var j = 0; j < arr.length; j++) { if (arr[j]._cur > fMax) { fMax = arr[j]._cur; f = j; } }
+            arr[f]._t = 0;
+            for (var rr = f + 1; rr < arr.length; rr++) { arr[rr]._t = arr[rr - 1]._t + (arr[rr - 1]._e + arr[rr]._e) / 2; }
+            for (var le = f - 1; le >= 0; le--) { arr[le]._t = arr[le + 1]._t - (arr[le]._e + arr[le + 1]._e) / 2; }
+            for (var k = 0; k < arr.length; k++) {
+              var ww = arr[k], cu = ww._cur;
+              // apply if the word is scaled OR if it must shift to make room for a scaled neighbour
+              if (cu > 1.0005 || Math.abs(ww._t) > 0.1) {
+                ww.style.transform = 'translateX(' + ww._t.toFixed(2) + 'px) scale(' + cu.toFixed(3) + ')';
+                ww.style.zIndex = cu > 1.01 ? '2' : '';
+                ww.style.color = (cu - 1) > 0.12 ? 'var(--accent-strong)' : '';
+              } else if (ww.style.transform) {
+                ww.style.transform = ''; ww.style.zIndex = ''; ww.style.color = '';
+              }
+            }
+          }
+          raf = (moving || inside) ? requestAnimationFrame(tick) : null;
+        }
+        function start() { if (!raf) raf = requestAnimationFrame(tick); }
+
+        el.addEventListener('mouseenter', function () { if (selecting) return; measure(); inside = true; start(); });
+        el.addEventListener('mousemove', function (e) {
+          if (selecting) { inside = false; start(); return; }
+          if (!inside) measure();
+          lastX = e.clientX; lastY = e.clientY; inside = true; start();
+        });
+        el.addEventListener('mouseleave', function () { inside = false; words.forEach(function (w) { w._target = 1; }); start(); });
+      });
+    })();
+
+    (function () {
+      var h1 = document.querySelector('.hero-text h1');
+      if (!h1) return;
+      var node = h1.firstChild;
+      if (!node || node.nodeType !== 3) return;
+      var frag = document.createDocumentFragment();
+      node.nodeValue.split('').forEach(function (ch) {
+        var s = document.createElement('span');
+        s.className = 'char';
+        s.textContent = ch === ' ' ? ' ' : ch;
+        frag.appendChild(s);
+      });
+      h1.replaceChild(frag, node);
+    })();
+
+    (function () {
+      var targets = document.querySelectorAll('main > section');
+      if (!('IntersectionObserver' in window)) return;
+      targets.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          // toggle (not unobserve) so the fade-in replays every time a section re-enters view
+          e.target.classList.toggle('in-view', e.isIntersecting);
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+      targets.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>

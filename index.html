@@ -7,7 +7,7 @@
   <meta name="description" content="Kaiqing Lin (林凯清), PhD candidate at Shenzhen University (advised by Prof. Bin Li), currently a visiting researcher with Prof. Luisa Verdoliva at the University of Naples Federico II. Multimedia forensics, multimedia security, and AI-generated image / deepfake detection." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz@0,6..72;1,6..72&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -57,11 +57,11 @@
           <a class="btn" href="mailto:linkaiqing2021@email.szu.edu.cn">Email me</a>
         </div>
         <ul class="metrics" aria-label="Citation metrics">
-          <li><span class="metric-num">232</span><span class="metric-label">Citations</span></li>
-          <li><span class="metric-num">8</span><span class="metric-label">h-index</span></li>
-          <li><span class="metric-num">5</span><span class="metric-label">i10-index</span></li>
+          <li><span class="metric-num">295</span><span class="metric-label">Citations</span></li>
+          <li><span class="metric-num">9</span><span class="metric-label">h-index</span></li>
+          <li><span class="metric-num">9</span><span class="metric-label">i10-index</span></li>
         </ul>
-        <p class="metrics-note">Metrics via Google Scholar · last updated June 2026</p>
+        <p class="metrics-note">Metrics via Google Scholar · last updated August 2026</p>
       </div>
     </section>
 
@@ -467,6 +467,19 @@
         });
         el.addEventListener('mouseleave', function () { inside = false; words.forEach(function (w) { w._target = 1; }); start(); });
       });
+    })();
+
+    (function () {
+      // Apply gradient-clipped text only after webfonts finish loading:
+      // painting background-clip:text before the swap leaves a stale glyph
+      // layer that overlaps the re-rendered text (ghost/double letters).
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () {
+          document.documentElement.classList.add('fonts-ready');
+        });
+      } else {
+        document.documentElement.classList.add('fonts-ready');
+      }
     })();
 
     (function () {

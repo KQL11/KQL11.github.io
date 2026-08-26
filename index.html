@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20260826" />
 </head>
 <body>
   <header class="site-header">
@@ -473,12 +473,21 @@
       // Apply gradient-clipped text only after webfonts finish loading:
       // painting background-clip:text before the swap leaves a stale glyph
       // layer that overlaps the re-rendered text (ghost/double letters).
+      // Re-applied on every font arrival (with a forced reflow in between)
+      // because WebKit can resolve fonts.ready before late swaps repaint.
+      var root = document.documentElement;
+      function applyGrad() {
+        root.classList.remove('fonts-ready');
+        void document.body.offsetWidth;
+        root.classList.add('fonts-ready');
+      }
       if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(function () {
-          document.documentElement.classList.add('fonts-ready');
-        });
+        document.fonts.ready.then(applyGrad);
+        if (document.fonts.addEventListener) {
+          document.fonts.addEventListener('loadingdone', applyGrad);
+        }
       } else {
-        document.documentElement.classList.add('fonts-ready');
+        root.classList.add('fonts-ready');
       }
     })();
 
@@ -494,7 +503,12 @@
         s.textContent = ch === ' ' ? ' ' : ch;
         frag.appendChild(s);
       });
-      h1.replaceChild(frag, node);
+      // nowrap wrapper: inline-block chars would otherwise let the browser
+      // break the name mid-word (e.g. "Kaiqin / g") in wider fallback fonts
+      var wrap = document.createElement('span');
+      wrap.className = 'name-en';
+      wrap.appendChild(frag);
+      h1.replaceChild(wrap, node);
     })();
 
     (function () {

@@ -514,6 +514,7 @@ code { background: #f0eee9; padding: 1px 6px; border-radius: 5px; font-size: .82
 .pub-title a:hover, .pub-authors a:hover, .pub-venue a:hover { text-decoration: none; border-bottom-color: var(--accent); }
 
 /* per-letter bounce on the name */
+.hero-text h1 .name-en { white-space: nowrap; }
 .hero-text h1 .char {
   display: inline-block;
   white-space: pre;

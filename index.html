@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260826" />
+  <link rel="stylesheet" href="style.css?v=20260826b" />
 </head>
 <body>
   <header class="site-header">
@@ -469,27 +469,17 @@
       });
     })();
 
-    (function () {
-      // Apply gradient-clipped text only after webfonts finish loading:
-      // painting background-clip:text before the swap leaves a stale glyph
-      // layer that overlaps the re-rendered text (ghost/double letters).
-      // Re-applied on every font arrival (with a forced reflow in between)
-      // because WebKit can resolve fonts.ready before late swaps repaint.
-      var root = document.documentElement;
-      function applyGrad() {
-        root.classList.remove('fonts-ready');
-        void document.body.offsetWidth;
-        root.classList.add('fonts-ready');
-      }
-      if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(applyGrad);
-        if (document.fonts.addEventListener) {
-          document.fonts.addEventListener('loadingdone', applyGrad);
-        }
-      } else {
-        root.classList.add('fonts-ready');
-      }
-    })();
+    // Per-character colors sampled along the orange→cream→blue ramp.
+    // Solid colors instead of background-clip:text, which misrenders as
+    // ghost/doubled glyphs on some GPU/browser combos when webfonts swap in.
+    function rampColor(t) {
+      var stops = [[240, 144, 74], [242, 211, 172], [74, 174, 224]];
+      var a, b, u;
+      if (t <= 0.5) { a = stops[0]; b = stops[1]; u = t / 0.5; }
+      else { a = stops[1]; b = stops[2]; u = (t - 0.5) / 0.5; }
+      var c = a.map(function (x, i) { return Math.round(x + (b[i] - x) * u); });
+      return 'rgb(' + c.join(',') + ')';
+    }
 
     (function () {
       var h1 = document.querySelector('.hero-text h1');
@@ -509,6 +499,27 @@
       wrap.className = 'name-en';
       wrap.appendChild(frag);
       h1.replaceChild(wrap, node);
+      var chars = wrap.querySelectorAll('.char');
+      var n = chars.length;
+      for (var i = 0; i < n; i++) {
+        var t = n > 1 ? i / (n - 1) : 0;
+        chars[i].style.color = rampColor(t);
+        // stagger half the shimmer period across the name so the ramp travels
+        chars[i].style.animationDelay = (-(t * 4.5)).toFixed(2) + 's';
+      }
+    })();
+
+    (function () {
+      document.querySelectorAll('.metric-num').forEach(function (el) {
+        var digits = el.textContent.split('');
+        el.textContent = '';
+        digits.forEach(function (d, i) {
+          var s = document.createElement('span');
+          s.textContent = d;
+          s.style.color = rampColor(digits.length > 1 ? i / (digits.length - 1) : 0);
+          el.appendChild(s);
+        });
+      });
     })();
 
     (function () {

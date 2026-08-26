@@ -156,24 +156,21 @@ main > section:nth-of-type(odd):not(#about)::before {
   margin: 0 0 14px;
   letter-spacing: -.01em;
   color: var(--accent);
-  animation: heroIn .7s var(--bounce) both, gradShift 9s ease-in-out infinite;
-}
-/* gradient-clipped text only once fonts are ready (see fonts-ready script) */
-.fonts-ready .hero-text h1 {
-  background: linear-gradient(120deg, var(--accent2) 0%, #fcecda 50%, var(--accent) 100%);
-  background-size: 220% 220%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  animation: heroIn .7s var(--bounce) both;
 }
 @keyframes heroIn {
   from { opacity: 0; transform: translateY(16px) scale(.95); }
   to   { opacity: 1; transform: none; }
 }
-@keyframes gradShift {
-  0%, 100% { background-position: 0% 50%; }
-  50%      { background-position: 100% 50%; }
+/* traveling gradient shimmer, one solid color per letter (no background-clip:
+   text — that path misrenders as ghost/doubled glyphs on some GPU/browser
+   combinations when webfonts swap in) */
+@keyframes nameShimmer {
+  0%   { color: #f0904a; }
+  25%  { color: #f2d3ac; }
+  50%  { color: #4aaee0; }
+  75%  { color: #f2d3ac; }
+  100% { color: #f0904a; }
 }
 .hero-text h1 .cjk {
   font-size: 1.6rem;
@@ -223,13 +220,6 @@ main > section:nth-of-type(odd):not(#about)::before {
   font-weight: 700;
   font-family: "Newsreader", serif;
   color: var(--accent);
-}
-.fonts-ready .metric-num {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
 }
 .metric-label { font-size: .74rem; color: var(--text-faint); text-transform: uppercase; letter-spacing: .06em; }
 .metrics-note { font-size: .78rem; color: var(--text-faint); margin: 10px 0 0; }
@@ -518,22 +508,15 @@ code { background: #f0eee9; padding: 1px 6px; border-radius: 5px; font-size: .82
 .hero-text h1 .char {
   display: inline-block;
   white-space: pre;
-  animation: gradShift 9s ease-in-out infinite;
+  animation: nameShimmer 9s ease-in-out infinite;
   transition: transform .3s var(--bounce);
   will-change: transform;
-}
-.fonts-ready .hero-text h1 .char {
-  background: linear-gradient(120deg, var(--accent2) 0%, #fcecda 50%, var(--accent) 100%);
-  background-size: 220% 220%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
 }
 .hero-text h1 .char:hover { transform: translateY(-10px) scale(1.3) rotate(-4deg); }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-text h1 { animation: none; }
+  .hero-text h1 .char { animation: none; }
   .btn:hover, .tag:hover, .nav-links a:hover, .nav-brand:hover,
   .metrics li:hover, .pub-list li:hover, .contact-links a:hover,
   .contact-links a:hover .contact-ico, .show-more-btn:hover,

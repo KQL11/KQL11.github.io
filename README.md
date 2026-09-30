@@ -32,4 +32,4 @@ same folder (any image format works — just keep the `.png` name, or change the
 
 If a file is missing, that figure is automatically hidden — the rest of the card still shows.
 
-Metrics (232 citations / h-index 8 / i10 5) and publications reflect your Google Scholar as of June 2026 — update the numbers in `index.html` periodically.
+Metrics (327 citations / h-index 9 / i10 9) and publications reflect your Google Scholar as of September 2026 — update the numbers in `index.html` periodically.

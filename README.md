@@ -20,9 +20,10 @@ Double-click `index.html` (opens in your browser). Keep `index.html` and `style.
 - **News** section — edit/add items as things change.
 
 ## Publication teaser figures
-Each paper in the "As (co-)first author" group shows a teaser image. Drop these 6 files into the
+Each paper in the "As (co-)first author" group shows a teaser image. Drop these 7 files into the
 same folder (any image format works — just keep the `.png` name, or change the `src` in `index.html`):
 
+- `Expert.png` — arXiv 2026 (EKI, Sharp Eyes to Expert Mind)
 - `fig-icml.png` — ICML 2026 (Deep-VRM)
 - `fig-cvpr.png` — CVPR 2026 (Unified-GRPO)
 - `fig-neurips.png` — NeurIPS 2025 (VIP Guard)
@@ -32,4 +33,4 @@ same folder (any image format works — just keep the `.png` name, or change the
 
 If a file is missing, that figure is automatically hidden — the rest of the card still shows.
 
-Metrics (327 citations / h-index 9 / i10 9) and publications reflect your Google Scholar as of September 2026 — update the numbers in `index.html` periodically.
+Metrics (340 citations / h-index 9 / i10 9) and publications reflect your Google Scholar as of October 2026 — update the numbers in `index.html` periodically.
